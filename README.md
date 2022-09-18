@@ -24,15 +24,36 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
-1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each.
+ 
+    A- .map is to convert data = to change a and b values in the cases of math or maybe to convert a string. 
+
+    B- .reduce is to return a single value = for averages, for totals ;
+
+    C- .filter filter data based on x that can be equated to either true or false = can be use to filter base on a condicion , maybe we are looking for all the population that is less than x number.
 
 2. Explain the difference between a callback and a higher order function.
 
+    A- callback: a function that is pass to another function as a argument , this is use when we invoke the HOF and we place are callback function as an argument. 
+    B- higher order function: a function that receive another function , this one receive the parameter for the cb and nest the function. 
+
 3. Explain what a closure is.
+
+    Is a Inner function reaching out of its scope to grab a variable defined in an outer function.
 
 4. Describe the four principles of the 'this' keyword.
 
+    A-When 'this' is located in the global scope = window/ console.
+
+    B-Implicit Binding: whatever is before the dot (.) is = to the value of this. So we can give  a different context to this depending on the Object we pass.
+
+    C-New Binding: Whenever we use a constructor function, this refers to the specific instance of the object that is created and returned by the constructor function ( we use the new keyword ).
+
+    D-Explicit Binding: when use JavaScript's call or apply method, this is explicitly defined. We are explicitly attaching one with the over because that is the purposes of this methods 
+
 5. Why do we need super() in an extended class?
+
+    To be able to inherit from the parent function , this is equal to what we did we .call ()
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
