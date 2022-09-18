@@ -17,9 +17,8 @@ function myFunction() {
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+/* function nestedFunction can reach out to access the variable internal because of closure:
+   function nestedFunction reaches outside it's scope to find the variable internal because it dosen't exist inside it's scope. 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -30,11 +29,24 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation( number /*Your Code Here*/) {
 
-  }
+let sum = number ;
+
+ for ( let i = 0 ; i < number ; i ++ ) {
+    sum = sum + i ;
+    // console.log (sum, 'sum')
+    // console.log(i, 'i') 
+    // console.log(number, 'number')
+ }
+
+return sum ;
+
+}
  
+const counter = summation(10) ;
+
+// console.log (counter) ; 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -60,10 +72,21 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function animalNames( array/*Your Code Here*/){
+   
+  let displayNames = [] ; 
   
+  array.forEach((element)=>{
+    
+  return displayNames.push ( `name: ${element.animal_name}, scientific: ${element.scientific_name}`)  ;
+ 
+  })  ;
+  
+  return displayNames 
+ 
+  } ;
+  
+//  console.log (animalNames (zooAnimals) )
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -75,10 +98,24 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  // zooAnimals = array as a parameter 
+  // array of string with animals name in lowercase
+  // return new array 
+  function lowerCaseNames( array/*Your Code Here*/){
+  
+  let lowercase = [] ;
+
+  array.map ( (element) => {
+  
+  return lowercase.push (`${element.animal_name.toLowerCase()}` ) 
+
+  }) 
+  
+  return lowercase 
+
   }
   
+  console.log ( lowerCaseNames (zooAnimals))
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
